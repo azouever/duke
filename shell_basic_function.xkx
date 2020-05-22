@@ -1,0 +1,5 @@
+#!/bin/zsh -x
+_DEBUG=on
+export function DEBUG(){
+    [[ "$_DEBUG" == "on" ]] && $@ || :
+}

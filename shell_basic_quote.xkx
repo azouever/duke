@@ -1,0 +1,30 @@
+#!/bin/zsh
+# declare variable
+source ~/.alias_xkx.sh
+current_time=`now`
+name='winedivine'
+echo 'hello shell'
+echo `date +"%Y-%m-%d %H:%M:%S"`
+echo 'date +"%Y-%m-%d %H:%M:%S"'
+echo "$PATH"
+echo "\$PATH"
+echo "\$PATH,`now`"
+echo $current_time
+echo $(now)
+#echo $PATH | sed -E 's/:/\n/g'
+echo '====================================='
+echo 'seq 3'
+echo `seq 3`
+echo "`seq 3`"
+echo $(seq 3)
+echo "$(seq 3)"
+echo '====================================='
+echo "i don't"
+echo "i don\`t"
+echo "i don\"t"
+echo '====================================='
+echo $'i don\'t'
+echo 'i don\x27t'
+echo '================ascii====================='
+# man ascii
+echo '\x4c\x6f\x76\x65 you forever'

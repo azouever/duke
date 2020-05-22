@@ -1,0 +1,23 @@
+#!/bin/zsh
+_DEBUG=off
+function DEBUG(){
+    [[ "$_DEBUG" == "on" ]] && $@ || :
+}
+source ~/.alias_xkx.sh
+# set -x
+# declare variable
+a='9uH5VfJYM7nKxLv5zopGeaMYn'
+
+echo ${#a}
+
+
+la .
+DEBUG echo `date`
+abspath=$(cd "$(dirname "$0")";pwd)
+currentFile=$abspath/$0
+echo $currentFile
+read  "variable?Enter your variable here:"
+sleep 3
+read  "variable_next?Enter your next here:"
+echo "Your input is:$variable"
+echo "Your another input is:$variable_next"

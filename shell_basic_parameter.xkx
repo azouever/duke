@@ -1,0 +1,8 @@
+#!/bin/zsh
+# declare variable
+echo "1st parameter is ${1}"
+echo "2nd parameter is ${2}"
+echo "all parameters are: ${@}"
+echo "all parameters are: ${*}"
+echo "parameter num is ${#}"
+echo "current process id $$"

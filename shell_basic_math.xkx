@@ -1,0 +1,37 @@
+#!/bin/zsh
+# declare variable
+a=7
+b=2
+c=2
+echo "a:$a,b:$b,c:$c"
+echo '================by (()) ========================'
+echo "a+b:$((a+b))"
+echo "a-b:$((a-b))"
+echo "a*b:$((a*b))"
+echo "a/b:$((a/b))"
+echo "a%b:$((a%b))"
+echo "a^b:$((a**b))"
+echo "a<<1:$((a<<1))"
+echo "a>>1:$((a>>1))"
+echo "--a:$((--a))" # echo 6
+# echo "a--:$((a--))" # echo 7 和 --a compare
+echo "a:$a"
+echo "a==b:$((a==b))"
+echo "a==c:$((b==c))"
+echo "a!=c:$((!b==c))"
+echo '================by let ========================'
+let sum=a-b
+echo ${sum}
+echo '================by bc ========================'
+d=1.15
+e=3.37
+echo "d*e,两位小数"
+echo "scale=2;$a*$b"|bc
+echo "输入为十进制，输出为二进制:"
+echo "ibase=10;obase=2;4*6"|bc
+echo "计算平方和平方根:"
+echo "10^2"|bc
+echo "sqrt(100)"|bc
+
+echo '================ handle float/double by awk ========================'
+echo 5 3 | awk '{ printf "%0.4f\n" ,$1/$2}'

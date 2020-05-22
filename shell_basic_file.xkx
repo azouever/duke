@@ -1,0 +1,8 @@
+#!/bin/zsh 
+file_name=shell.basic.file.xkx
+prefix=${file_name%%.*}
+echo ${file_name%.*}
+echo ${file_name#*.}
+echo ${file_name%%.*}
+echo ${file_name##*.}
+echo ${filename##*.}

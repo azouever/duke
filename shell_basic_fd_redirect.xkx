@@ -1,0 +1,11 @@
+#!/bin/zsh
+# declare fd
+current_dir=`pwd`
+log_dir="$current_dir/log.xkx"
+# exec 3<$log_dir
+# cat <&3
+exec 4>>$log_dir
+uptime | column -t >&4
+echo '==========================='
+exec 5<$log_dir
+cat -n <&5
